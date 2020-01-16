@@ -1,0 +1,8 @@
+- is mimic an instance of a `DatabaseModel` or a class?
+    - presumably an instance, but there are many instances of mimicIII databases around the world, so should probably make it a class
+- database columns repeat over tables, but are they *different* column instances in OWL?
+    - if a new instance for a column was made for each table it appears in it would be duplicative, but what if we need to model foreign keys? (which may be specific to a single instance of a column in a given table)
+- for boolean columns, can we assume the absense of a property to equate to `false`?
+- for column types, should we make a `data property` of type `string` with the *value* the name of the property (e.g., "datetime") or take a metadata approach and have the `rdf:datatype` be representative of the value? Basically:
+    - <proj:DataType rdf:datatype="http://www.w3.org/2001/XMLSchema#int"/>, or
+    - <proj:DataType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</proj:DataType>
