@@ -2,7 +2,10 @@
     - presumably an instance, but there are many instances of mimicIII databases around the world, so should probably make it a class
 - database columns repeat over tables, but are they *different* column instances in OWL?
     - if a new instance for a column was made for each table it appears in it would be duplicative, but what if we need to model foreign keys? (which may be specific to a single instance of a column in a given table)
+    - what if two columns exist in two tables with the same name but are completely unrelated? (eg, `CATEGORY`)
+    - what is a good naming convention for table.column? (should it just be `table.column`?)
 - for boolean columns, can we assume the absense of a property to equate to `false`?
 - for column types, should we make a `data property` of type `string` with the *value* the name of the property (e.g., "datetime") or take a metadata approach and have the `rdf:datatype` be representative of the value? Basically:
     - <proj:DataType rdf:datatype="http://www.w3.org/2001/XMLSchema#int"/>, or
     - <proj:DataType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">int</proj:DataType>
+- ICD9 and ICD10 both represent physiological conditions, but it feels like their class, `ICD`, should have the relation. How to model that?
