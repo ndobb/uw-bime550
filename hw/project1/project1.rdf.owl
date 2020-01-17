@@ -1,0 +1,989 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/dobbins/ontologies/2020/0/untitled-ontology-2#"
+     xml:base="http://www.semanticweb.org/dobbins/ontologies/2020/0/untitled-ontology-2"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ndobb_project1="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#CanEncodeAs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#CanEncodeAs"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DataType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DataType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#EncodedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#EncodedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Encodes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Encodes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Encodes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#HasColumn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#HasColumn"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#HasTable -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#HasTable"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#InstanceOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#InstanceOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#MayHave -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#MayHave">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#RepresentedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#RepresentedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Represents"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Represents -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Represents"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#IsEncounterId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#IsEncounterId">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#IsPersonId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#IsPersonId"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#IsPrimaryKey -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#IsPrimaryKey">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Database -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Database"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumnType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumnType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseModel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseTable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseTable"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Encoding -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Encoding"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#MsSqlServer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#MsSqlServer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumnType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Organism -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Organism"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#PhysiologicalCharacteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#PhysiologicalCharacteristic"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Procedure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Procedure"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Representation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Representation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseTable"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.ADMISSION_LOCATION"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.ADMISSION_TYPE"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.ADMITTIME"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.DEATHTIME"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.DIAGNOSIS"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.DISCHARGE_LOCATION"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.DISCHTIME"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.EDOUTTIME"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.EDREGTIME"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.ETHNICITY"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.HADM_ID"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.HAS_CHARTEVENTS_DATA"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.HOSPITAL_EXPIRE_FLAG"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.INSURANCE"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.LANGUAGE"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.MARITAL_STATUS"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.RELIGION"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.ROW_ID"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.SUBJECT_ID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.ADMISSION_LOCATION -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.ADMISSION_LOCATION">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#nvarchar"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADMISSION_LOCATION</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.ADMISSION_TYPE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.ADMISSION_TYPE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#nvarchar"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADMISSION_TYPE</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.ADMITTIME -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.ADMITTIME">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#datetime"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADMITTIME</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.DEATHTIME -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.DEATHTIME">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#datetime"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEATHTIME</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.DIAGNOSIS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.DIAGNOSIS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#nvarchar"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DIAGNOSIS</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.DISCHARGE_LOCATION -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.DISCHARGE_LOCATION">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#nvarchar"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DISCHARGE_LOCATION</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.DISCHTIME -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.DISCHTIME">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#datetime"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DISCHTIME</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.EDOUTTIME -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.EDOUTTIME">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#datetime"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDOUTTIME</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.EDREGTIME -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.EDREGTIME">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#datetime"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDREGTIME</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.ETHNICITY -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.ETHNICITY">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#nvarchar"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ETHNICITY</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.HADM_ID -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.HADM_ID">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#int"/>
+        <ndobb_project1:IsEncounterId rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ndobb_project1:IsEncounterId>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HADM_ID</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.HAS_CHARTEVENTS_DATA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.HAS_CHARTEVENTS_DATA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#bit"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HAS_CHARTEVENTS_DATA</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.HOSPITAL_EXPIRE_FLAG -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.HOSPITAL_EXPIRE_FLAG">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#bit"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HOSPITAL_EXPIRE_FLAG</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.INSURANCE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.INSURANCE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#nvarchar"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INSURANCE</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.LANGUAGE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.LANGUAGE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#nvarchar"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LANGUAGE</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.MARITAL_STATUS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.MARITAL_STATUS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#nvarchar"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MARITAL_STATUS</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.RELIGION -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.RELIGION">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#nvarchar"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RELIGION</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.ROW_ID -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.ROW_ID">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#int"/>
+        <ndobb_project1:IsPrimaryKey rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ndobb_project1:IsPrimaryKey>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ROW_ID</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.SUBJECT_ID -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.SUBJECT_ID">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#int"/>
+        <ndobb_project1:IsPersonId rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ndobb_project1:IsPersonId>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUBJECT_ID</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#CALLOUT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#CALLOUT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseTable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#CAREGIVERS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#CAREGIVERS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseTable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#CPT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#CPT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Encoding"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#CPTEVENTS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#CPTEVENTS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseTable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DIAGNOSES_ICD -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DIAGNOSES_ICD">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseTable"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DIAGNOSES_ICD.HADM_ID"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DIAGNOSES_ICD.ICD9_CODE"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DIAGNOSES_ICD.ROW_ID"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DIAGNOSES_ICD.SEQ_NUM"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DIAGNOSES_ICD.SUBJECT_ID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DIAGNOSES_ICD.HADM_ID -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DIAGNOSES_ICD.HADM_ID">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#int"/>
+        <ndobb_project1:IsEncounterId rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ndobb_project1:IsEncounterId>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HADM_ID</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DIAGNOSES_ICD.ICD9_CODE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DIAGNOSES_ICD.ICD9_CODE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#nvarchar"/>
+        <ndobb_project1:Encodes rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICD9"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9_CODE</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DIAGNOSES_ICD.ROW_ID -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DIAGNOSES_ICD.ROW_ID">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#int"/>
+        <ndobb_project1:IsPrimaryKey rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ndobb_project1:IsPrimaryKey>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ROW_ID</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DIAGNOSES_ICD.SEQ_NUM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DIAGNOSES_ICD.SEQ_NUM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#int"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SEQ_NUM</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DIAGNOSES_ICD.SUBJECT_ID -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DIAGNOSES_ICD.SUBJECT_ID">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#int"/>
+        <ndobb_project1:IsPersonId rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ndobb_project1:IsPersonId>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUBJECT_ID</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#D_ITEMS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#D_ITEMS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseTable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#D_LABITEMS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#D_LABITEMS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseTable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Human -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Human">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Organism"/>
+        <ndobb_project1:MayHave rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#PhysiologicalCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICD10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICD10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Encoding"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICD9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICD9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Encoding"/>
+        <ndobb_project1:Represents rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#PhysiologicalCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseTable"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.DBSOURCE"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.FIRST_CAREUNIT"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.FIRST_WARDID"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.HADM_ID"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.ICUSTAY_ID"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.INTIME"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.LAST_CAREUNIT"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.LAST_WARDID"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.LOS"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.OUTTIME"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.ROW_ID"/>
+        <ndobb_project1:HasColumn rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.SUBJECT_ID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.DBSOURCE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.DBSOURCE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#nvarchar"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DB_SOURCE</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.FIRST_CAREUNIT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.FIRST_CAREUNIT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#nvarchar"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FIRST_CAREUNIT</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.FIRST_WARDID -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.FIRST_WARDID">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#int"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FIRST_WARDID</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.HADM_ID -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.HADM_ID">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#int"/>
+        <ndobb_project1:IsEncounterId rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ndobb_project1:IsEncounterId>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HADM_ID</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.ICUSTAY_ID -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.ICUSTAY_ID">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#int"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICUSTAY_ID</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.INTIME -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.INTIME">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#datetime"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INTIME</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.LAST_CAREUNIT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.LAST_CAREUNIT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#nvarchar"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LAST_CAREUNIT</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.LAST_WARDID -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.LAST_WARDID">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#int"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LAST_WARDID</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.LOS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.LOS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#float"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LOS</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.OUTTIME -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.OUTTIME">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#datetime"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OUTTIME</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.ROW_ID -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.ROW_ID">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#int"/>
+        <ndobb_project1:IsPrimaryKey rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ndobb_project1:IsPrimaryKey>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ROW_ID</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.SUBJECT_ID -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.SUBJECT_ID">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#int"/>
+        <ndobb_project1:IsPersonId rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ndobb_project1:IsPersonId>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUBJECT_ID</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseTable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.CHARTTIME -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.CHARTTIME">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#datetime"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHARTTIME</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.FLAG -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.FLAG">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#nvarchar"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FLAG</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.HADM_ID -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.HADM_ID">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#int"/>
+        <ndobb_project1:IsEncounterId rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ndobb_project1:IsEncounterId>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HADM_ID</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.ITEMID -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.ITEMID">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#int"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ITEMID</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.ROW_ID -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.ROW_ID">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#int"/>
+        <ndobb_project1:IsPrimaryKey rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ndobb_project1:IsPrimaryKey>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ROW_ID</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.SUBJECT_ID -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.SUBJECT_ID">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#int"/>
+        <ndobb_project1:IsPersonId rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ndobb_project1:IsPersonId>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUBJECT_ID</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.VALUE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.VALUE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#nvarchar"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALUE</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.VALUENUM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.VALUENUM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#float"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALUENUM</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.VALUEUOM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.VALUEUOM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+        <ndobb_project1:DataType rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#nvarchar"/>
+        <ndobb_project1:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VALUEUOM</ndobb_project1:Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LOINC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LOINC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Encoding"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#MimicIII -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#MimicIII">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseModel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#NOTEEVENTS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#NOTEEVENTS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseTable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#PATIENTS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#PATIENTS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseTable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#PRESCRIPTIONS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#PRESCRIPTIONS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseTable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#PROCEDURES_ICD -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#PROCEDURES_ICD">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseTable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#PhysiologicalCondition -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#PhysiologicalCondition">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#PhysiologicalCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#SERVICES -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#SERVICES">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseTable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#TRANSFERS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#TRANSFERS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseTable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#bit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#bit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#MsSqlServer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#date -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#date">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#MsSqlServer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#datetime -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#datetime">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#MsSqlServer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#double -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#double">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#MsSqlServer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#float -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#float">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#MsSqlServer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#int -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#int">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#MsSqlServer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#mimic3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#mimic3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Database"/>
+        <ndobb_project1:HasTable rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS"/>
+        <ndobb_project1:HasTable rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#CALLOUT"/>
+        <ndobb_project1:HasTable rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#CAREGIVERS"/>
+        <ndobb_project1:HasTable rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#CPTEVENTS"/>
+        <ndobb_project1:HasTable rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DIAGNOSES_ICD"/>
+        <ndobb_project1:HasTable rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#D_ITEMS"/>
+        <ndobb_project1:HasTable rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#D_LABITEMS"/>
+        <ndobb_project1:HasTable rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS"/>
+        <ndobb_project1:HasTable rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS"/>
+        <ndobb_project1:HasTable rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#PATIENTS"/>
+        <ndobb_project1:HasTable rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#PRESCRIPTIONS"/>
+        <ndobb_project1:HasTable rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#PROCEDURES_ICD"/>
+        <ndobb_project1:HasTable rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#SERVICES"/>
+        <ndobb_project1:HasTable rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#TRANSFERS"/>
+        <ndobb_project1:InstanceOf rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#MimicIII"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#nvarchar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#nvarchar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#MsSqlServer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#varchar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#varchar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#MsSqlServer"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

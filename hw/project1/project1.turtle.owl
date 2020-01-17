@@ -1,0 +1,672 @@
+@prefix : <http://www.semanticweb.org/dobbins/ontologies/2020/0/untitled-ontology-2#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ndobb_project1: <http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#> .
+@base <http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1> .
+
+<http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#CanEncodeAs
+ndobb_project1:CanEncodeAs rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DataType
+ndobb_project1:DataType rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#EncodedBy
+ndobb_project1:EncodedBy rdf:type owl:ObjectProperty ;
+                         owl:inverseOf ndobb_project1:Encodes .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Encodes
+ndobb_project1:Encodes rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#HasColumn
+ndobb_project1:HasColumn rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#HasTable
+ndobb_project1:HasTable rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#InstanceOf
+ndobb_project1:InstanceOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#MayHave
+ndobb_project1:MayHave rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#RepresentedBy
+ndobb_project1:RepresentedBy rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf owl:topObjectProperty ;
+                             owl:inverseOf ndobb_project1:Represents .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Represents
+ndobb_project1:Represents rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#IsEncounterId
+ndobb_project1:IsEncounterId rdf:type owl:DatatypeProperty ;
+                             rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#IsPersonId
+ndobb_project1:IsPersonId rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#IsPrimaryKey
+ndobb_project1:IsPrimaryKey rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Name
+ndobb_project1:Name rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Database
+ndobb_project1:Database rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn
+ndobb_project1:DatabaseColumn rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumnType
+ndobb_project1:DatabaseColumnType rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseModel
+ndobb_project1:DatabaseModel rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseTable
+ndobb_project1:DatabaseTable rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Encoding
+ndobb_project1:Encoding rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#MsSqlServer
+ndobb_project1:MsSqlServer rdf:type owl:Class ;
+                           rdfs:subClassOf ndobb_project1:DatabaseColumnType .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Organism
+ndobb_project1:Organism rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#PhysiologicalCharacteristic
+ndobb_project1:PhysiologicalCharacteristic rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Procedure
+ndobb_project1:Procedure rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Representation
+ndobb_project1:Representation rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS
+ndobb_project1:ADMISSIONS rdf:type owl:NamedIndividual ,
+                                   ndobb_project1:DatabaseTable ;
+                          ndobb_project1:HasColumn ndobb_project1:ADMISSIONS.ADMISSION_LOCATION ,
+                                                   ndobb_project1:ADMISSIONS.ADMISSION_TYPE ,
+                                                   ndobb_project1:ADMISSIONS.ADMITTIME ,
+                                                   ndobb_project1:ADMISSIONS.DEATHTIME ,
+                                                   ndobb_project1:ADMISSIONS.DIAGNOSIS ,
+                                                   ndobb_project1:ADMISSIONS.DISCHARGE_LOCATION ,
+                                                   ndobb_project1:ADMISSIONS.DISCHTIME ,
+                                                   ndobb_project1:ADMISSIONS.EDOUTTIME ,
+                                                   ndobb_project1:ADMISSIONS.EDREGTIME ,
+                                                   ndobb_project1:ADMISSIONS.ETHNICITY ,
+                                                   ndobb_project1:ADMISSIONS.HADM_ID ,
+                                                   ndobb_project1:ADMISSIONS.HAS_CHARTEVENTS_DATA ,
+                                                   ndobb_project1:ADMISSIONS.HOSPITAL_EXPIRE_FLAG ,
+                                                   ndobb_project1:ADMISSIONS.INSURANCE ,
+                                                   ndobb_project1:ADMISSIONS.LANGUAGE ,
+                                                   ndobb_project1:ADMISSIONS.MARITAL_STATUS ,
+                                                   ndobb_project1:ADMISSIONS.RELIGION ,
+                                                   ndobb_project1:ADMISSIONS.ROW_ID ,
+                                                   ndobb_project1:ADMISSIONS.SUBJECT_ID .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.ADMISSION_LOCATION
+ndobb_project1:ADMISSIONS.ADMISSION_LOCATION rdf:type owl:NamedIndividual ,
+                                                      ndobb_project1:DatabaseColumn ;
+                                             ndobb_project1:DataType ndobb_project1:nvarchar ;
+                                             ndobb_project1:Name "ADMISSION_LOCATION"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.ADMISSION_TYPE
+ndobb_project1:ADMISSIONS.ADMISSION_TYPE rdf:type owl:NamedIndividual ,
+                                                  ndobb_project1:DatabaseColumn ;
+                                         ndobb_project1:DataType ndobb_project1:nvarchar ;
+                                         ndobb_project1:Name "ADMISSION_TYPE"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.ADMITTIME
+ndobb_project1:ADMISSIONS.ADMITTIME rdf:type owl:NamedIndividual ,
+                                             ndobb_project1:DatabaseColumn ;
+                                    ndobb_project1:DataType ndobb_project1:datetime ;
+                                    ndobb_project1:Name "ADMITTIME"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.DEATHTIME
+ndobb_project1:ADMISSIONS.DEATHTIME rdf:type owl:NamedIndividual ,
+                                             ndobb_project1:DatabaseColumn ;
+                                    ndobb_project1:DataType ndobb_project1:datetime ;
+                                    ndobb_project1:Name "DEATHTIME"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.DIAGNOSIS
+ndobb_project1:ADMISSIONS.DIAGNOSIS rdf:type owl:NamedIndividual ,
+                                             ndobb_project1:DatabaseColumn ;
+                                    ndobb_project1:DataType ndobb_project1:nvarchar ;
+                                    ndobb_project1:Name "DIAGNOSIS"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.DISCHARGE_LOCATION
+ndobb_project1:ADMISSIONS.DISCHARGE_LOCATION rdf:type owl:NamedIndividual ,
+                                                      ndobb_project1:DatabaseColumn ;
+                                             ndobb_project1:DataType ndobb_project1:nvarchar ;
+                                             ndobb_project1:Name "DISCHARGE_LOCATION"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.DISCHTIME
+ndobb_project1:ADMISSIONS.DISCHTIME rdf:type owl:NamedIndividual ,
+                                             ndobb_project1:DatabaseColumn ;
+                                    ndobb_project1:DataType ndobb_project1:datetime ;
+                                    ndobb_project1:Name "DISCHTIME"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.EDOUTTIME
+ndobb_project1:ADMISSIONS.EDOUTTIME rdf:type owl:NamedIndividual ,
+                                             ndobb_project1:DatabaseColumn ;
+                                    ndobb_project1:DataType ndobb_project1:datetime ;
+                                    ndobb_project1:Name "EDOUTTIME"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.EDREGTIME
+ndobb_project1:ADMISSIONS.EDREGTIME rdf:type owl:NamedIndividual ,
+                                             ndobb_project1:DatabaseColumn ;
+                                    ndobb_project1:DataType ndobb_project1:datetime ;
+                                    ndobb_project1:Name "EDREGTIME"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.ETHNICITY
+ndobb_project1:ADMISSIONS.ETHNICITY rdf:type owl:NamedIndividual ,
+                                             ndobb_project1:DatabaseColumn ;
+                                    ndobb_project1:DataType ndobb_project1:nvarchar ;
+                                    ndobb_project1:Name "ETHNICITY"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.HADM_ID
+ndobb_project1:ADMISSIONS.HADM_ID rdf:type owl:NamedIndividual ,
+                                           ndobb_project1:DatabaseColumn ;
+                                  ndobb_project1:DataType ndobb_project1:int ;
+                                  ndobb_project1:IsEncounterId "true"^^xsd:boolean ;
+                                  ndobb_project1:Name "HADM_ID"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.HAS_CHARTEVENTS_DATA
+ndobb_project1:ADMISSIONS.HAS_CHARTEVENTS_DATA rdf:type owl:NamedIndividual ,
+                                                        ndobb_project1:DatabaseColumn ;
+                                               ndobb_project1:DataType ndobb_project1:bit ;
+                                               ndobb_project1:Name "HAS_CHARTEVENTS_DATA"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.HOSPITAL_EXPIRE_FLAG
+ndobb_project1:ADMISSIONS.HOSPITAL_EXPIRE_FLAG rdf:type owl:NamedIndividual ,
+                                                        ndobb_project1:DatabaseColumn ;
+                                               ndobb_project1:DataType ndobb_project1:bit ;
+                                               ndobb_project1:Name "HOSPITAL_EXPIRE_FLAG"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.INSURANCE
+ndobb_project1:ADMISSIONS.INSURANCE rdf:type owl:NamedIndividual ,
+                                             ndobb_project1:DatabaseColumn ;
+                                    ndobb_project1:DataType ndobb_project1:nvarchar ;
+                                    ndobb_project1:Name "INSURANCE"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.LANGUAGE
+ndobb_project1:ADMISSIONS.LANGUAGE rdf:type owl:NamedIndividual ,
+                                            ndobb_project1:DatabaseColumn ;
+                                   ndobb_project1:DataType ndobb_project1:nvarchar ;
+                                   ndobb_project1:Name "LANGUAGE"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.MARITAL_STATUS
+ndobb_project1:ADMISSIONS.MARITAL_STATUS rdf:type owl:NamedIndividual ,
+                                                  ndobb_project1:DatabaseColumn ;
+                                         ndobb_project1:DataType ndobb_project1:nvarchar ;
+                                         ndobb_project1:Name "MARITAL_STATUS"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.RELIGION
+ndobb_project1:ADMISSIONS.RELIGION rdf:type owl:NamedIndividual ,
+                                            ndobb_project1:DatabaseColumn ;
+                                   ndobb_project1:DataType ndobb_project1:nvarchar ;
+                                   ndobb_project1:Name "RELIGION"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.ROW_ID
+ndobb_project1:ADMISSIONS.ROW_ID rdf:type owl:NamedIndividual ,
+                                          ndobb_project1:DatabaseColumn ;
+                                 ndobb_project1:DataType ndobb_project1:int ;
+                                 ndobb_project1:IsPrimaryKey "true"^^xsd:boolean ;
+                                 ndobb_project1:Name "ROW_ID"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ADMISSIONS.SUBJECT_ID
+ndobb_project1:ADMISSIONS.SUBJECT_ID rdf:type owl:NamedIndividual ,
+                                              ndobb_project1:DatabaseColumn ;
+                                     ndobb_project1:DataType ndobb_project1:int ;
+                                     ndobb_project1:IsPersonId "true"^^xsd:boolean ;
+                                     ndobb_project1:Name "SUBJECT_ID"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#CALLOUT
+ndobb_project1:CALLOUT rdf:type owl:NamedIndividual ,
+                                ndobb_project1:DatabaseTable .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#CAREGIVERS
+ndobb_project1:CAREGIVERS rdf:type owl:NamedIndividual ,
+                                   ndobb_project1:DatabaseTable .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#CPT
+ndobb_project1:CPT rdf:type owl:NamedIndividual ,
+                            ndobb_project1:Encoding .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#CPTEVENTS
+ndobb_project1:CPTEVENTS rdf:type owl:NamedIndividual ,
+                                  ndobb_project1:DatabaseTable .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DIAGNOSES_ICD
+ndobb_project1:DIAGNOSES_ICD rdf:type owl:NamedIndividual ,
+                                      ndobb_project1:DatabaseTable ;
+                             ndobb_project1:HasColumn ndobb_project1:DIAGNOSES_ICD.HADM_ID ,
+                                                      ndobb_project1:DIAGNOSES_ICD.ICD9_CODE ,
+                                                      ndobb_project1:DIAGNOSES_ICD.ROW_ID ,
+                                                      ndobb_project1:DIAGNOSES_ICD.SEQ_NUM ,
+                                                      ndobb_project1:DIAGNOSES_ICD.SUBJECT_ID .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DIAGNOSES_ICD.HADM_ID
+ndobb_project1:DIAGNOSES_ICD.HADM_ID rdf:type owl:NamedIndividual ,
+                                              ndobb_project1:DatabaseColumn ;
+                                     ndobb_project1:DataType ndobb_project1:int ;
+                                     ndobb_project1:IsEncounterId "true"^^xsd:boolean ;
+                                     ndobb_project1:Name "HADM_ID"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DIAGNOSES_ICD.ICD9_CODE
+ndobb_project1:DIAGNOSES_ICD.ICD9_CODE rdf:type owl:NamedIndividual ,
+                                                ndobb_project1:DatabaseColumn ;
+                                       ndobb_project1:DataType ndobb_project1:nvarchar ;
+                                       ndobb_project1:Encodes ndobb_project1:ICD9 ;
+                                       ndobb_project1:Name "ICD9_CODE"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DIAGNOSES_ICD.ROW_ID
+ndobb_project1:DIAGNOSES_ICD.ROW_ID rdf:type owl:NamedIndividual ,
+                                             ndobb_project1:DatabaseColumn ;
+                                    ndobb_project1:DataType ndobb_project1:int ;
+                                    ndobb_project1:IsPrimaryKey "true"^^xsd:boolean ;
+                                    ndobb_project1:Name "ROW_ID"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DIAGNOSES_ICD.SEQ_NUM
+ndobb_project1:DIAGNOSES_ICD.SEQ_NUM rdf:type owl:NamedIndividual ,
+                                              ndobb_project1:DatabaseColumn ;
+                                     ndobb_project1:DataType ndobb_project1:int ;
+                                     ndobb_project1:Name "SEQ_NUM"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DIAGNOSES_ICD.SUBJECT_ID
+ndobb_project1:DIAGNOSES_ICD.SUBJECT_ID rdf:type owl:NamedIndividual ,
+                                                 ndobb_project1:DatabaseColumn ;
+                                        ndobb_project1:DataType ndobb_project1:int ;
+                                        ndobb_project1:IsPersonId "true"^^xsd:boolean ;
+                                        ndobb_project1:Name "SUBJECT_ID"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#D_ITEMS
+ndobb_project1:D_ITEMS rdf:type owl:NamedIndividual ,
+                                ndobb_project1:DatabaseTable .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#D_LABITEMS
+ndobb_project1:D_LABITEMS rdf:type owl:NamedIndividual ,
+                                   ndobb_project1:DatabaseTable .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Human
+ndobb_project1:Human rdf:type owl:NamedIndividual ,
+                              ndobb_project1:Organism ;
+                     ndobb_project1:MayHave ndobb_project1:PhysiologicalCondition .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICD10
+ndobb_project1:ICD10 rdf:type owl:NamedIndividual ,
+                              ndobb_project1:Encoding .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICD9
+ndobb_project1:ICD9 rdf:type owl:NamedIndividual ,
+                             ndobb_project1:Encoding ;
+                    ndobb_project1:Represents ndobb_project1:PhysiologicalCondition .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS
+ndobb_project1:ICUSTAYS rdf:type owl:NamedIndividual ,
+                                 ndobb_project1:DatabaseTable ;
+                        ndobb_project1:HasColumn ndobb_project1:ICUSTAYS.DBSOURCE ,
+                                                 ndobb_project1:ICUSTAYS.FIRST_CAREUNIT ,
+                                                 ndobb_project1:ICUSTAYS.FIRST_WARDID ,
+                                                 ndobb_project1:ICUSTAYS.HADM_ID ,
+                                                 ndobb_project1:ICUSTAYS.ICUSTAY_ID ,
+                                                 ndobb_project1:ICUSTAYS.INTIME ,
+                                                 ndobb_project1:ICUSTAYS.LAST_CAREUNIT ,
+                                                 ndobb_project1:ICUSTAYS.LAST_WARDID ,
+                                                 ndobb_project1:ICUSTAYS.LOS ,
+                                                 ndobb_project1:ICUSTAYS.OUTTIME ,
+                                                 ndobb_project1:ICUSTAYS.ROW_ID ,
+                                                 ndobb_project1:ICUSTAYS.SUBJECT_ID .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.DBSOURCE
+ndobb_project1:ICUSTAYS.DBSOURCE rdf:type owl:NamedIndividual ,
+                                          ndobb_project1:DatabaseColumn ;
+                                 ndobb_project1:DataType ndobb_project1:nvarchar ;
+                                 ndobb_project1:Name "DB_SOURCE"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.FIRST_CAREUNIT
+ndobb_project1:ICUSTAYS.FIRST_CAREUNIT rdf:type owl:NamedIndividual ,
+                                                ndobb_project1:DatabaseColumn ;
+                                       ndobb_project1:DataType ndobb_project1:nvarchar ;
+                                       ndobb_project1:Name "FIRST_CAREUNIT"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.FIRST_WARDID
+ndobb_project1:ICUSTAYS.FIRST_WARDID rdf:type owl:NamedIndividual ,
+                                              ndobb_project1:DatabaseColumn ;
+                                     ndobb_project1:DataType ndobb_project1:int ;
+                                     ndobb_project1:Name "FIRST_WARDID"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.HADM_ID
+ndobb_project1:ICUSTAYS.HADM_ID rdf:type owl:NamedIndividual ,
+                                         ndobb_project1:DatabaseColumn ;
+                                ndobb_project1:DataType ndobb_project1:int ;
+                                ndobb_project1:IsEncounterId "true"^^xsd:boolean ;
+                                ndobb_project1:Name "HADM_ID"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.ICUSTAY_ID
+ndobb_project1:ICUSTAYS.ICUSTAY_ID rdf:type owl:NamedIndividual ,
+                                            ndobb_project1:DatabaseColumn ;
+                                   ndobb_project1:DataType ndobb_project1:int ;
+                                   ndobb_project1:Name "ICUSTAY_ID"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.INTIME
+ndobb_project1:ICUSTAYS.INTIME rdf:type owl:NamedIndividual ,
+                                        ndobb_project1:DatabaseColumn ;
+                               ndobb_project1:DataType ndobb_project1:datetime ;
+                               ndobb_project1:Name "INTIME"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.LAST_CAREUNIT
+ndobb_project1:ICUSTAYS.LAST_CAREUNIT rdf:type owl:NamedIndividual ,
+                                               ndobb_project1:DatabaseColumn ;
+                                      ndobb_project1:DataType ndobb_project1:nvarchar ;
+                                      ndobb_project1:Name "LAST_CAREUNIT"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.LAST_WARDID
+ndobb_project1:ICUSTAYS.LAST_WARDID rdf:type owl:NamedIndividual ,
+                                             ndobb_project1:DatabaseColumn ;
+                                    ndobb_project1:DataType ndobb_project1:int ;
+                                    ndobb_project1:Name "LAST_WARDID"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.LOS
+ndobb_project1:ICUSTAYS.LOS rdf:type owl:NamedIndividual ,
+                                     ndobb_project1:DatabaseColumn ;
+                            ndobb_project1:DataType ndobb_project1:float ;
+                            ndobb_project1:Name "LOS"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.OUTTIME
+ndobb_project1:ICUSTAYS.OUTTIME rdf:type owl:NamedIndividual ,
+                                         ndobb_project1:DatabaseColumn ;
+                                ndobb_project1:DataType ndobb_project1:datetime ;
+                                ndobb_project1:Name "OUTTIME"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.ROW_ID
+ndobb_project1:ICUSTAYS.ROW_ID rdf:type owl:NamedIndividual ,
+                                        ndobb_project1:DatabaseColumn ;
+                               ndobb_project1:DataType ndobb_project1:int ;
+                               ndobb_project1:IsPrimaryKey "true"^^xsd:boolean ;
+                               ndobb_project1:Name "ROW_ID"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ICUSTAYS.SUBJECT_ID
+ndobb_project1:ICUSTAYS.SUBJECT_ID rdf:type owl:NamedIndividual ,
+                                            ndobb_project1:DatabaseColumn ;
+                                   ndobb_project1:DataType ndobb_project1:int ;
+                                   ndobb_project1:IsPersonId "true"^^xsd:boolean ;
+                                   ndobb_project1:Name "SUBJECT_ID"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS
+ndobb_project1:LABEVENTS rdf:type owl:NamedIndividual ,
+                                  ndobb_project1:DatabaseTable .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.CHARTTIME
+ndobb_project1:LABEVENTS.CHARTTIME rdf:type owl:NamedIndividual ,
+                                            ndobb_project1:DatabaseColumn ;
+                                   ndobb_project1:DataType ndobb_project1:datetime ;
+                                   ndobb_project1:Name "CHARTTIME"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.FLAG
+ndobb_project1:LABEVENTS.FLAG rdf:type owl:NamedIndividual ,
+                                       ndobb_project1:DatabaseColumn ;
+                              ndobb_project1:DataType ndobb_project1:nvarchar ;
+                              ndobb_project1:Name "FLAG"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.HADM_ID
+ndobb_project1:LABEVENTS.HADM_ID rdf:type owl:NamedIndividual ,
+                                          ndobb_project1:DatabaseColumn ;
+                                 ndobb_project1:DataType ndobb_project1:int ;
+                                 ndobb_project1:IsEncounterId "true"^^xsd:boolean ;
+                                 ndobb_project1:Name "HADM_ID"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.ITEMID
+ndobb_project1:LABEVENTS.ITEMID rdf:type owl:NamedIndividual ,
+                                         ndobb_project1:DatabaseColumn ;
+                                ndobb_project1:DataType ndobb_project1:int ;
+                                ndobb_project1:Name "ITEMID"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.ROW_ID
+ndobb_project1:LABEVENTS.ROW_ID rdf:type owl:NamedIndividual ,
+                                         ndobb_project1:DatabaseColumn ;
+                                ndobb_project1:DataType ndobb_project1:int ;
+                                ndobb_project1:IsPrimaryKey "true"^^xsd:boolean ;
+                                ndobb_project1:Name "ROW_ID"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.SUBJECT_ID
+ndobb_project1:LABEVENTS.SUBJECT_ID rdf:type owl:NamedIndividual ,
+                                             ndobb_project1:DatabaseColumn ;
+                                    ndobb_project1:DataType ndobb_project1:int ;
+                                    ndobb_project1:IsPersonId "true"^^xsd:boolean ;
+                                    ndobb_project1:Name "SUBJECT_ID"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.VALUE
+ndobb_project1:LABEVENTS.VALUE rdf:type owl:NamedIndividual ,
+                                        ndobb_project1:DatabaseColumn ;
+                               ndobb_project1:DataType ndobb_project1:nvarchar ;
+                               ndobb_project1:Name "VALUE"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.VALUENUM
+ndobb_project1:LABEVENTS.VALUENUM rdf:type owl:NamedIndividual ,
+                                           ndobb_project1:DatabaseColumn ;
+                                  ndobb_project1:DataType ndobb_project1:float ;
+                                  ndobb_project1:Name "VALUENUM"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LABEVENTS.VALUEUOM
+ndobb_project1:LABEVENTS.VALUEUOM rdf:type owl:NamedIndividual ,
+                                           ndobb_project1:DatabaseColumn ;
+                                  ndobb_project1:DataType ndobb_project1:nvarchar ;
+                                  ndobb_project1:Name "VALUEUOM"^^xsd:string .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#LOINC
+ndobb_project1:LOINC rdf:type owl:NamedIndividual ,
+                              ndobb_project1:Encoding .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#MimicIII
+ndobb_project1:MimicIII rdf:type owl:NamedIndividual ,
+                                 ndobb_project1:DatabaseModel .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#NOTEEVENTS
+ndobb_project1:NOTEEVENTS rdf:type owl:NamedIndividual ,
+                                   ndobb_project1:DatabaseTable .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#PATIENTS
+ndobb_project1:PATIENTS rdf:type owl:NamedIndividual ,
+                                 ndobb_project1:DatabaseTable .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#PRESCRIPTIONS
+ndobb_project1:PRESCRIPTIONS rdf:type owl:NamedIndividual ,
+                                      ndobb_project1:DatabaseTable .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#PROCEDURES_ICD
+ndobb_project1:PROCEDURES_ICD rdf:type owl:NamedIndividual ,
+                                       ndobb_project1:DatabaseTable .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#PhysiologicalCondition
+ndobb_project1:PhysiologicalCondition rdf:type owl:NamedIndividual ,
+                                               ndobb_project1:PhysiologicalCharacteristic .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#SERVICES
+ndobb_project1:SERVICES rdf:type owl:NamedIndividual ,
+                                 ndobb_project1:DatabaseTable .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#TRANSFERS
+ndobb_project1:TRANSFERS rdf:type owl:NamedIndividual ,
+                                  ndobb_project1:DatabaseTable .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#bit
+ndobb_project1:bit rdf:type owl:NamedIndividual ,
+                            ndobb_project1:MsSqlServer .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#date
+ndobb_project1:date rdf:type owl:NamedIndividual ,
+                             ndobb_project1:MsSqlServer .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#datetime
+ndobb_project1:datetime rdf:type owl:NamedIndividual ,
+                                 ndobb_project1:MsSqlServer .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#double
+ndobb_project1:double rdf:type owl:NamedIndividual ,
+                               ndobb_project1:MsSqlServer .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#float
+ndobb_project1:float rdf:type owl:NamedIndividual ,
+                              ndobb_project1:MsSqlServer .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#int
+ndobb_project1:int rdf:type owl:NamedIndividual ,
+                            ndobb_project1:MsSqlServer .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#mimic3
+ndobb_project1:mimic3 rdf:type owl:NamedIndividual ,
+                               ndobb_project1:Database ;
+                      ndobb_project1:HasTable ndobb_project1:ADMISSIONS ,
+                                              ndobb_project1:CALLOUT ,
+                                              ndobb_project1:CAREGIVERS ,
+                                              ndobb_project1:CPTEVENTS ,
+                                              ndobb_project1:DIAGNOSES_ICD ,
+                                              ndobb_project1:D_ITEMS ,
+                                              ndobb_project1:D_LABITEMS ,
+                                              ndobb_project1:ICUSTAYS ,
+                                              ndobb_project1:LABEVENTS ,
+                                              ndobb_project1:PATIENTS ,
+                                              ndobb_project1:PRESCRIPTIONS ,
+                                              ndobb_project1:PROCEDURES_ICD ,
+                                              ndobb_project1:SERVICES ,
+                                              ndobb_project1:TRANSFERS ;
+                      ndobb_project1:InstanceOf ndobb_project1:MimicIII .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#nvarchar
+ndobb_project1:nvarchar rdf:type owl:NamedIndividual ,
+                                 ndobb_project1:MsSqlServer .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#varchar
+ndobb_project1:varchar rdf:type owl:NamedIndividual ,
+                                ndobb_project1:MsSqlServer .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
