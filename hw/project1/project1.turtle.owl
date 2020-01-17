@@ -58,6 +58,10 @@ ndobb_project1:RepresentedBy rdf:type owl:ObjectProperty ;
 ndobb_project1:Represents rdf:type owl:ObjectProperty .
 
 
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Stores
+ndobb_project1:Stores rdf:type owl:ObjectProperty .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -84,24 +88,38 @@ ndobb_project1:Name rdf:type owl:DatatypeProperty .
 #    Classes
 #################################################################
 
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Data
+ndobb_project1:Data rdf:type owl:Class ;
+                    rdfs:subClassOf ndobb_project1:ElectronicElement .
+
+
 ###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Database
-ndobb_project1:Database rdf:type owl:Class .
+ndobb_project1:Database rdf:type owl:Class ;
+                        rdfs:subClassOf ndobb_project1:StorageElement .
 
 
 ###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn
-ndobb_project1:DatabaseColumn rdf:type owl:Class .
+ndobb_project1:DatabaseColumn rdf:type owl:Class ;
+                              rdfs:subClassOf ndobb_project1:StorageComponent .
 
 
 ###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumnType
-ndobb_project1:DatabaseColumnType rdf:type owl:Class .
+ndobb_project1:DatabaseColumnType rdf:type owl:Class ;
+                                  rdfs:subClassOf ndobb_project1:StorageComponent .
 
 
 ###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseModel
-ndobb_project1:DatabaseModel rdf:type owl:Class .
+ndobb_project1:DatabaseModel rdf:type owl:Class ;
+                             rdfs:subClassOf ndobb_project1:StorageComponent .
 
 
 ###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseTable
-ndobb_project1:DatabaseTable rdf:type owl:Class .
+ndobb_project1:DatabaseTable rdf:type owl:Class ;
+                             rdfs:subClassOf ndobb_project1:StorageComponent .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ElectronicElement
+ndobb_project1:ElectronicElement rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Encoding
@@ -127,6 +145,16 @@ ndobb_project1:Procedure rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Representation
 ndobb_project1:Representation rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#StorageComponent
+ndobb_project1:StorageComponent rdf:type owl:Class ;
+                                rdfs:subClassOf ndobb_project1:ElectronicElement .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#StorageElement
+ndobb_project1:StorageElement rdf:type owl:Class ;
+                              rdfs:subClassOf ndobb_project1:ElectronicElement .
 
 
 #################################################################
@@ -311,6 +339,11 @@ ndobb_project1:CPT rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#CPTEVENTS
 ndobb_project1:CPTEVENTS rdf:type owl:NamedIndividual ,
                                   ndobb_project1:DatabaseTable .
+
+
+###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ClinicalData
+ndobb_project1:ClinicalData rdf:type owl:NamedIndividual ,
+                                     ndobb_project1:Data .
 
 
 ###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DIAGNOSES_ICD
@@ -571,7 +604,8 @@ ndobb_project1:LOINC rdf:type owl:NamedIndividual ,
 
 ###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#MimicIII
 ndobb_project1:MimicIII rdf:type owl:NamedIndividual ,
-                                 ndobb_project1:DatabaseModel .
+                                 ndobb_project1:DatabaseModel ;
+                        ndobb_project1:Represents ndobb_project1:ClinicalData .
 
 
 ###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#NOTEEVENTS
@@ -656,7 +690,8 @@ ndobb_project1:mimic3 rdf:type owl:NamedIndividual ,
                                               ndobb_project1:PROCEDURES_ICD ,
                                               ndobb_project1:SERVICES ,
                                               ndobb_project1:TRANSFERS ;
-                      ndobb_project1:InstanceOf ndobb_project1:MimicIII .
+                      ndobb_project1:InstanceOf ndobb_project1:MimicIII ;
+                      ndobb_project1:Stores ndobb_project1:ClinicalData .
 
 
 ###  http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#nvarchar

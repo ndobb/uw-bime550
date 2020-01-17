@@ -91,6 +91,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Stores -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Stores"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -141,33 +147,57 @@
     
 
 
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Data">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ElectronicElement"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Database -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Database"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Database">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#StorageElement"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumn">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#StorageComponent"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumnType -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumnType"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseColumnType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#StorageComponent"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseModel -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseModel"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseModel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#StorageComponent"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseTable -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseTable"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseTable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#StorageComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ElectronicElement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ElectronicElement"/>
     
 
 
@@ -206,6 +236,22 @@
     <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Representation -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Representation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#StorageComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#StorageComponent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ElectronicElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#StorageElement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#StorageElement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ElectronicElement"/>
+    </owl:Class>
     
 
 
@@ -468,6 +514,14 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#CPTEVENTS">
         <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseTable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ClinicalData -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ClinicalData">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#Data"/>
     </owl:NamedIndividual>
     
 
@@ -837,6 +891,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#MimicIII">
         <rdf:type rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#DatabaseModel"/>
+        <ndobb_project1:Represents rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ClinicalData"/>
     </owl:NamedIndividual>
     
 
@@ -964,6 +1019,7 @@
         <ndobb_project1:HasTable rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#SERVICES"/>
         <ndobb_project1:HasTable rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#TRANSFERS"/>
         <ndobb_project1:InstanceOf rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#MimicIII"/>
+        <ndobb_project1:Stores rdf:resource="http://www.semanticweb.org/dobbins/ontologies/2020/0/ndobb_project1#ClinicalData"/>
     </owl:NamedIndividual>
     
 
