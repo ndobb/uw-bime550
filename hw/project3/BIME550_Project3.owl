@@ -28,6 +28,18 @@ tnm-lung-olivier:hasAnatomicalPart rdf:type owl:ObjectProperty ;
                                    rdf:type owl:TransitiveProperty .
 
 
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#hasEffusion
+tnm-lung-olivier:hasEffusion rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf owl:topObjectProperty ;
+                             owl:inverseOf tnm-lung-olivier:isEffusionOf ;
+                             rdfs:domain tnm-lung-olivier:AnatomicalStructure ;
+                             rdfs:range tnm-lung-olivier:Effusion .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#hasExcessOf
+tnm-lung-olivier:hasExcessOf rdf:type owl:ObjectProperty .
+
+
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#hasLocation
 tnm-lung-olivier:hasLocation rdf:type owl:ObjectProperty ;
                              owl:inverseOf tnm-lung-olivier:isLocatedIn ;
@@ -37,13 +49,13 @@ tnm-lung-olivier:hasLocation rdf:type owl:ObjectProperty ;
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#hasMetastasis
 tnm-lung-olivier:hasMetastasis rdf:type owl:ObjectProperty ;
                                owl:inverseOf tnm-lung-olivier:isMetastasisOf ;
-                               rdfs:domain tnm-lung-olivier:PrimaryTumour ;
+                               rdfs:domain tnm-lung-olivier:PrimaryTumor ;
                                rdfs:range tnm-lung-olivier:Metastasis .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#hasPrimaryTumour
 tnm-lung-olivier:hasPrimaryTumour rdf:type owl:ObjectProperty ;
-                                  rdfs:range tnm-lung-olivier:PrimaryTumour .
+                                  rdfs:range tnm-lung-olivier:PrimaryTumor .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#hasSide
@@ -56,6 +68,12 @@ tnm-lung-olivier:isAnatomicalPartOf rdf:type owl:ObjectProperty ,
                                              owl:TransitiveProperty .
 
 
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#isEffusionOf
+tnm-lung-olivier:isEffusionOf rdf:type owl:ObjectProperty ;
+                              rdfs:domain tnm-lung-olivier:Effusion ;
+                              rdfs:range tnm-lung-olivier:AnatomicalStructure .
+
+
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#isLocatedIn
 tnm-lung-olivier:isLocatedIn rdf:type owl:ObjectProperty .
 
@@ -63,7 +81,15 @@ tnm-lung-olivier:isLocatedIn rdf:type owl:ObjectProperty .
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#isMetastasisOf
 tnm-lung-olivier:isMetastasisOf rdf:type owl:ObjectProperty ,
                                          owl:FunctionalProperty ;
-                                rdfs:range tnm-lung-olivier:PrimaryTumour .
+                                rdfs:range tnm-lung-olivier:PrimaryTumor .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#isMalignant
+tnm-lung-olivier:isMalignant rdf:type owl:DatatypeProperty .
 
 
 #################################################################
@@ -73,7 +99,7 @@ tnm-lung-olivier:isMetastasisOf rdf:type owl:ObjectProperty ,
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#AnatomicalStructure
 tnm-lung-olivier:AnatomicalStructure rdf:type owl:Class ;
                                      owl:disjointWith tnm-lung-olivier:Side ,
-                                                      tnm-lung-olivier:Tumour .
+                                                      tnm-lung-olivier:Tumor .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#AxillaryLymphNode
@@ -127,6 +153,7 @@ tnm-lung-olivier:Brain rdf:type owl:Class ;
                                         tnm-lung-olivier:LymphNode ,
                                         tnm-lung-olivier:Mediastinum ,
                                         tnm-lung-olivier:ParietalPericardium ,
+                                        tnm-lung-olivier:PleuralSpace ,
                                         tnm-lung-olivier:Trachea .
 
 
@@ -142,8 +169,9 @@ tnm-lung-olivier:BrainMetastasis rdf:type owl:Class ;
                                                      ] .
 
 
-###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#CancerDiagnosis
-tnm-lung-olivier:CancerDiagnosis rdf:type owl:Class .
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Cancer
+tnm-lung-olivier:Cancer rdf:type owl:Class ;
+                        rdfs:subClassOf tnm-lung-olivier:MedicalCondition .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#ChestWall
@@ -158,6 +186,7 @@ tnm-lung-olivier:ChestWall rdf:type owl:Class ;
                                             tnm-lung-olivier:LymphNode ,
                                             tnm-lung-olivier:Mediastinum ,
                                             tnm-lung-olivier:ParietalPericardium ,
+                                            tnm-lung-olivier:PleuralSpace ,
                                             tnm-lung-olivier:Trachea .
 
 
@@ -208,6 +237,7 @@ tnm-lung-olivier:Diaphragm rdf:type owl:Class ;
                                             tnm-lung-olivier:LymphNode ,
                                             tnm-lung-olivier:Mediastinum ,
                                             tnm-lung-olivier:ParietalPericardium ,
+                                            tnm-lung-olivier:PleuralSpace ,
                                             tnm-lung-olivier:Trachea .
 
 
@@ -229,6 +259,15 @@ tnm-lung-olivier:DistantMetastasis rdf:type owl:Class ;
                                                        ] .
 
 
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Effusion
+tnm-lung-olivier:Effusion rdf:type owl:Class ;
+                          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                owl:onProperty tnm-lung-olivier:hasExcessOf ;
+                                                owl:someValuesFrom tnm-lung-olivier:Fluid
+                                              ] ;
+                          rdfs:subClassOf tnm-lung-olivier:MedicalCondition .
+
+
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Esophagus
 tnm-lung-olivier:Esophagus rdf:type owl:Class ;
                            rdfs:subClassOf tnm-lung-olivier:AnatomicalStructure ;
@@ -237,7 +276,12 @@ tnm-lung-olivier:Esophagus rdf:type owl:Class ;
                                             tnm-lung-olivier:LymphNode ,
                                             tnm-lung-olivier:Mediastinum ,
                                             tnm-lung-olivier:ParietalPericardium ,
+                                            tnm-lung-olivier:PleuralSpace ,
                                             tnm-lung-olivier:Trachea .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Fluid
+tnm-lung-olivier:Fluid rdf:type owl:Class .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Heart
@@ -247,6 +291,7 @@ tnm-lung-olivier:Heart rdf:type owl:Class ;
                                         tnm-lung-olivier:LymphNode ,
                                         tnm-lung-olivier:Mediastinum ,
                                         tnm-lung-olivier:ParietalPericardium ,
+                                        tnm-lung-olivier:PleuralSpace ,
                                         tnm-lung-olivier:Trachea .
 
 
@@ -351,6 +396,7 @@ tnm-lung-olivier:Liver rdf:type owl:Class ;
                        owl:disjointWith tnm-lung-olivier:LymphNode ,
                                         tnm-lung-olivier:Mediastinum ,
                                         tnm-lung-olivier:ParietalPericardium ,
+                                        tnm-lung-olivier:PleuralSpace ,
                                         tnm-lung-olivier:Trachea .
 
 
@@ -441,28 +487,29 @@ tnm-lung-olivier:Lung rdf:type owl:Class ;
                                           ] ;
                       rdfs:subClassOf tnm-lung-olivier:AnatomicalStructure ;
                       owl:disjointWith tnm-lung-olivier:LymphNode ,
-                                       tnm-lung-olivier:Mediastinum .
+                                       tnm-lung-olivier:Mediastinum ,
+                                       tnm-lung-olivier:PleuralSpace .
 
 
-###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#LungCancerDiagnosis
-tnm-lung-olivier:LungCancerDiagnosis rdf:type owl:Class ;
-                                     owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:CancerDiagnosis
-                                                                                [ rdf:type owl:Restriction ;
-                                                                                  owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
-                                                                                  owl:someValuesFrom [ rdf:type owl:Restriction ;
-                                                                                                       owl:onProperty tnm-lung-olivier:hasLocation ;
-                                                                                                       owl:someValuesFrom tnm-lung-olivier:Lung
-                                                                                                     ]
-                                                                                ]
-                                                                              ) ;
-                                                           rdf:type owl:Class
-                                                         ] ;
-                                     rdfs:subClassOf tnm-lung-olivier:CancerDiagnosis .
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#LungCancer
+tnm-lung-olivier:LungCancer rdf:type owl:Class ;
+                            owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:Cancer
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
+                                                                         owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty tnm-lung-olivier:hasLocation ;
+                                                                                              owl:someValuesFrom tnm-lung-olivier:Lung
+                                                                                            ]
+                                                                       ]
+                                                                     ) ;
+                                                  rdf:type owl:Class
+                                                ] ;
+                            rdfs:subClassOf tnm-lung-olivier:Cancer .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#LungCancerExamples
 tnm-lung-olivier:LungCancerExamples rdf:type owl:Class ;
-                                    rdfs:subClassOf tnm-lung-olivier:LungCancerDiagnosis .
+                                    rdfs:subClassOf tnm-lung-olivier:LungCancer .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#LymphNode
@@ -470,13 +517,14 @@ tnm-lung-olivier:LymphNode rdf:type owl:Class ;
                            rdfs:subClassOf tnm-lung-olivier:AnatomicalStructure ;
                            owl:disjointWith tnm-lung-olivier:Mediastinum ,
                                             tnm-lung-olivier:ParietalPericardium ,
+                                            tnm-lung-olivier:PleuralSpace ,
                                             tnm-lung-olivier:Trachea ;
                            rdfs:comment "All subclasses should be provided a definition involving their location"^^xsd:string .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#M0
 tnm-lung-olivier:M0 rdf:type owl:Class ;
-                    owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:LungCancerDiagnosis
+                    owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:LungCancer
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty tnm-lung-olivier:hasMetastasis ;
                                                                  owl:allValuesFrom tnm-lung-olivier:RegionalLymphNodeMetastasis
@@ -488,7 +536,7 @@ tnm-lung-olivier:M0 rdf:type owl:Class ;
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#M1
 tnm-lung-olivier:M1 rdf:type owl:Class ;
-                    owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:LungCancerDiagnosis
+                    owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:LungCancer
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty tnm-lung-olivier:hasMetastasis ;
                                                                  owl:someValuesFrom tnm-lung-olivier:DistantMetastasis
@@ -496,6 +544,43 @@ tnm-lung-olivier:M1 rdf:type owl:Class ;
                                                              ) ;
                                           rdf:type owl:Class
                                         ] .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#M1a
+tnm-lung-olivier:M1a rdf:type owl:Class ;
+                     owl:equivalentClass [ rdf:type owl:Class ;
+                                           owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                           owl:onProperty tnm-lung-olivier:hasEffusion ;
+                                                           owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty tnm-lung-olivier:isMalignant ;
+                                                                                owl:hasValue "true"^^xsd:boolean
+                                                                              ]
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty tnm-lung-olivier:hasMetastasis ;
+                                                           owl:someValuesFrom tnm-lung-olivier:ContralateralMetastasis
+                                                         ]
+                                                       )
+                                         ] ;
+                     rdfs:subClassOf tnm-lung-olivier:M1 .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#MalignantPericardialEffusion
+tnm-lung-olivier:MalignantPericardialEffusion rdf:type owl:Class ;
+                                              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty tnm-lung-olivier:isMalignant ;
+                                                                    owl:hasValue "true"^^xsd:boolean
+                                                                  ] ;
+                                              rdfs:subClassOf tnm-lung-olivier:PericardialEffusion .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#MalignantPleuralEffusion
+tnm-lung-olivier:MalignantPleuralEffusion rdf:type owl:Class ;
+                                          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                owl:onProperty tnm-lung-olivier:isMalignant ;
+                                                                owl:hasValue "true"^^xsd:boolean
+                                                              ] ;
+                                          rdfs:subClassOf tnm-lung-olivier:PleuralEffusion .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#MediastinalLymphNode
@@ -511,7 +596,12 @@ tnm-lung-olivier:MediastinalLymphNode rdf:type owl:Class ;
 tnm-lung-olivier:Mediastinum rdf:type owl:Class ;
                              rdfs:subClassOf tnm-lung-olivier:AnatomicalStructure ;
                              owl:disjointWith tnm-lung-olivier:ParietalPericardium ,
+                                              tnm-lung-olivier:PleuralSpace ,
                                               tnm-lung-olivier:Trachea .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#MedicalCondition
+tnm-lung-olivier:MedicalCondition rdf:type owl:Class .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Metastasis
@@ -521,7 +611,7 @@ tnm-lung-olivier:Metastasis rdf:type owl:Class ;
                                               owl:onProperty tnm-lung-olivier:hasLocation ;
                                               owl:cardinality "1"^^xsd:nonNegativeInteger
                                             ] ;
-                            owl:disjointWith tnm-lung-olivier:PrimaryTumour .
+                            owl:disjointWith tnm-lung-olivier:PrimaryTumor .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#MiddleLobeOfLung
@@ -536,7 +626,7 @@ tnm-lung-olivier:MiddleLobeOfLung rdf:type owl:Class ;
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#N0
 tnm-lung-olivier:N0 rdf:type owl:Class ;
-                    owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:LungCancerDiagnosis
+                    owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:LungCancer
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty tnm-lung-olivier:hasMetastasis ;
                                                                  owl:allValuesFrom tnm-lung-olivier:DistantMetastasis
@@ -549,7 +639,8 @@ tnm-lung-olivier:N0 rdf:type owl:Class ;
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#ParietalPericardium
 tnm-lung-olivier:ParietalPericardium rdf:type owl:Class ;
                                      rdfs:subClassOf tnm-lung-olivier:AnatomicalStructure ;
-                                     owl:disjointWith tnm-lung-olivier:Trachea .
+                                     owl:disjointWith tnm-lung-olivier:PleuralSpace ,
+                                                      tnm-lung-olivier:Trachea .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Patient1
@@ -746,13 +837,77 @@ tnm-lung-olivier:PeribronchialLymphNode rdf:type owl:Class ;
                                                          tnm-lung-olivier:SupraclavicularLymphNode .
 
 
-###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#PrimaryTumour
-tnm-lung-olivier:PrimaryTumour rdf:type owl:Class ;
-                               rdfs:subClassOf tnm-lung-olivier:Tumour ,
-                                               [ rdf:type owl:Restriction ;
-                                                 owl:onProperty tnm-lung-olivier:hasLocation ;
-                                                 owl:cardinality "1"^^xsd:nonNegativeInteger
-                                               ] .
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#PericardialEffusion
+tnm-lung-olivier:PericardialEffusion rdf:type owl:Class ;
+                                     owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty tnm-lung-olivier:hasExcessOf ;
+                                                                                  owl:someValuesFrom tnm-lung-olivier:PericardialFluid
+                                                                                ]
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty tnm-lung-olivier:hasLocation ;
+                                                                                  owl:someValuesFrom tnm-lung-olivier:ParietalPericardium
+                                                                                ]
+                                                                              ) ;
+                                                           rdf:type owl:Class
+                                                         ] ;
+                                     rdfs:subClassOf tnm-lung-olivier:Effusion .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#PericardialFluid
+tnm-lung-olivier:PericardialFluid rdf:type owl:Class ;
+                                  owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:Fluid
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty tnm-lung-olivier:hasLocation ;
+                                                                               owl:someValuesFrom tnm-lung-olivier:ParietalPericardium
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ] ;
+                                  rdfs:subClassOf tnm-lung-olivier:Fluid .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#PleuralEffusion
+tnm-lung-olivier:PleuralEffusion rdf:type owl:Class ;
+                                 owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty tnm-lung-olivier:hasExcessOf ;
+                                                                              owl:someValuesFrom tnm-lung-olivier:PleuralFluid
+                                                                            ]
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty tnm-lung-olivier:hasLocation ;
+                                                                              owl:someValuesFrom tnm-lung-olivier:PleuralSpace
+                                                                            ]
+                                                                          ) ;
+                                                       rdf:type owl:Class
+                                                     ] ;
+                                 rdfs:subClassOf tnm-lung-olivier:Effusion .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#PleuralFluid
+tnm-lung-olivier:PleuralFluid rdf:type owl:Class ;
+                              owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:Fluid
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty tnm-lung-olivier:hasLocation ;
+                                                                           owl:someValuesFrom tnm-lung-olivier:PleuralSpace
+                                                                         ]
+                                                                       ) ;
+                                                    rdf:type owl:Class
+                                                  ] ;
+                              rdfs:subClassOf tnm-lung-olivier:Fluid .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#PleuralSpace
+tnm-lung-olivier:PleuralSpace rdf:type owl:Class ;
+                              rdfs:subClassOf tnm-lung-olivier:AnatomicalStructure ;
+                              owl:disjointWith tnm-lung-olivier:Trachea .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#PrimaryTumor
+tnm-lung-olivier:PrimaryTumor rdf:type owl:Class ;
+                              rdfs:subClassOf tnm-lung-olivier:Tumor ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty tnm-lung-olivier:hasLocation ;
+                                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                              ] .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#RegionalLymphNode
@@ -811,7 +966,7 @@ tnm-lung-olivier:RightLung rdf:type owl:Class ;
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#RightLungPrimaryTumor
 tnm-lung-olivier:RightLungPrimaryTumor rdf:type owl:Class ;
-                                       rdfs:subClassOf tnm-lung-olivier:PrimaryTumour ,
+                                       rdfs:subClassOf tnm-lung-olivier:PrimaryTumor ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty tnm-lung-olivier:hasLocation ;
                                                          owl:someValuesFrom tnm-lung-olivier:RightLung
@@ -843,7 +998,7 @@ tnm-lung-olivier:ScaleneLimphNode rdf:type owl:Class ;
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Side
 tnm-lung-olivier:Side rdf:type owl:Class ;
-                      owl:disjointWith tnm-lung-olivier:Tumour .
+                      owl:disjointWith tnm-lung-olivier:Tumor .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Stage1A
@@ -868,7 +1023,8 @@ tnm-lung-olivier:Stage2A rdf:type owl:Class ;
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#StagedLungCancer
-tnm-lung-olivier:StagedLungCancer rdf:type owl:Class .
+tnm-lung-olivier:StagedLungCancer rdf:type owl:Class ;
+                                  rdfs:subClassOf tnm-lung-olivier:LungCancer .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#SubcarinalLymphNode
@@ -884,12 +1040,16 @@ tnm-lung-olivier:SupraclavicularLymphNode rdf:type owl:Class ;
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#T1
 tnm-lung-olivier:T1 rdf:type owl:Class ;
-                    rdfs:subClassOf tnm-lung-olivier:LungCancerDiagnosis .
+                    rdfs:subClassOf tnm-lung-olivier:LungCancer .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Trachea
 tnm-lung-olivier:Trachea rdf:type owl:Class ;
                          rdfs:subClassOf tnm-lung-olivier:AnatomicalStructure .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Tumor
+tnm-lung-olivier:Tumor rdf:type owl:Class .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#TumorBetween2cm3cm
@@ -914,7 +1074,7 @@ tnm-lung-olivier:TumorGreater7cm rdf:type owl:Class ;
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#TumorSize
 tnm-lung-olivier:TumorSize rdf:type owl:Class ;
-                           rdfs:subClassOf tnm-lung-olivier:Tumour .
+                           rdfs:subClassOf tnm-lung-olivier:Tumor .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#TumorSmaller2cm
@@ -922,13 +1082,9 @@ tnm-lung-olivier:TumorSmaller2cm rdf:type owl:Class ;
                                  rdfs:subClassOf tnm-lung-olivier:TumorSize .
 
 
-###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Tumour
-tnm-lung-olivier:Tumour rdf:type owl:Class .
-
-
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#UpperLeftLobePrimaryTumor
 tnm-lung-olivier:UpperLeftLobePrimaryTumor rdf:type owl:Class ;
-                                           rdfs:subClassOf tnm-lung-olivier:PrimaryTumour ,
+                                           rdfs:subClassOf tnm-lung-olivier:PrimaryTumor ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty tnm-lung-olivier:hasLocation ;
                                                              owl:someValuesFrom tnm-lung-olivier:UpperLobeOfLeftLung
