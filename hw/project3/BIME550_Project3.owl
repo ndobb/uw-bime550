@@ -169,6 +169,11 @@ tnm-lung-olivier:BrainMetastasis rdf:type owl:Class ;
                                                      ] .
 
 
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Bronchus
+tnm-lung-olivier:Bronchus rdf:type owl:Class ;
+                          rdfs:subClassOf tnm-lung-olivier:AnatomicalStructure .
+
+
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Cancer
 tnm-lung-olivier:Cancer rdf:type owl:Class ;
                         rdfs:subClassOf tnm-lung-olivier:MedicalCondition .
@@ -301,7 +306,7 @@ tnm-lung-olivier:HilarLymphNode rdf:type owl:Class ;
                                 owl:disjointWith tnm-lung-olivier:IntrapulmonaryNode ,
                                                  tnm-lung-olivier:MediastinalLymphNode ,
                                                  tnm-lung-olivier:PeribronchialLymphNode ,
-                                                 tnm-lung-olivier:ScaleneLimphNode ,
+                                                 tnm-lung-olivier:ScaleneLymphNode ,
                                                  tnm-lung-olivier:SubcarinalLymphNode ,
                                                  tnm-lung-olivier:SupraclavicularLymphNode .
 
@@ -311,7 +316,7 @@ tnm-lung-olivier:IntrapulmonaryNode rdf:type owl:Class ;
                                     rdfs:subClassOf tnm-lung-olivier:RegionalLymphNode ;
                                     owl:disjointWith tnm-lung-olivier:MediastinalLymphNode ,
                                                      tnm-lung-olivier:PeribronchialLymphNode ,
-                                                     tnm-lung-olivier:ScaleneLimphNode ,
+                                                     tnm-lung-olivier:ScaleneLymphNode ,
                                                      tnm-lung-olivier:SubcarinalLymphNode ,
                                                      tnm-lung-olivier:SupraclavicularLymphNode .
 
@@ -363,6 +368,22 @@ tnm-lung-olivier:LeftAnatomicalStructure rdf:type owl:Class ;
                                                                rdf:type owl:Class
                                                              ] ;
                                          owl:disjointWith tnm-lung-olivier:RightAnatomicalStructure .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#LeftHilarMetastasis
+tnm-lung-olivier:LeftHilarMetastasis rdf:type owl:Class ;
+                                     rdfs:subClassOf tnm-lung-olivier:Metastasis ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty tnm-lung-olivier:hasLocation ;
+                                                       owl:someValuesFrom [ owl:intersectionOf ( tnm-lung-olivier:HilarLymphNode
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty tnm-lung-olivier:hasSide ;
+                                                                                                   owl:hasValue tnm-lung-olivier:left
+                                                                                                 ]
+                                                                                               ) ;
+                                                                            rdf:type owl:Class
+                                                                          ]
+                                                     ] .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#LeftLung
@@ -565,6 +586,32 @@ tnm-lung-olivier:M1a rdf:type owl:Class ;
                      rdfs:subClassOf tnm-lung-olivier:M1 .
 
 
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#M1b
+tnm-lung-olivier:M1b rdf:type owl:Class ;
+                     owl:equivalentClass [ rdf:type owl:Restriction ;
+                                           owl:onProperty tnm-lung-olivier:hasMetastasis ;
+                                           owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                owl:onProperty tnm-lung-olivier:isLocatedIn ;
+                                                                owl:someValuesFrom [ owl:intersectionOf ( [ rdf:type owl:Class ;
+                                                                                                            owl:complementOf tnm-lung-olivier:ChestWall
+                                                                                                          ]
+                                                                                                          [ rdf:type owl:Class ;
+                                                                                                            owl:complementOf tnm-lung-olivier:LobeOfLung
+                                                                                                          ]
+                                                                                                          [ rdf:type owl:Class ;
+                                                                                                            owl:complementOf tnm-lung-olivier:Lung
+                                                                                                          ]
+                                                                                                          [ rdf:type owl:Class ;
+                                                                                                            owl:complementOf tnm-lung-olivier:Trachea
+                                                                                                          ]
+                                                                                                        ) ;
+                                                                                     rdf:type owl:Class
+                                                                                   ]
+                                                              ]
+                                         ] ;
+                     rdfs:subClassOf tnm-lung-olivier:M1 .
+
+
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#MalignantPericardialEffusion
 tnm-lung-olivier:MalignantPericardialEffusion rdf:type owl:Class ;
                                               owl:equivalentClass [ rdf:type owl:Restriction ;
@@ -587,7 +634,7 @@ tnm-lung-olivier:MalignantPleuralEffusion rdf:type owl:Class ;
 tnm-lung-olivier:MediastinalLymphNode rdf:type owl:Class ;
                                       rdfs:subClassOf tnm-lung-olivier:RegionalLymphNode ;
                                       owl:disjointWith tnm-lung-olivier:PeribronchialLymphNode ,
-                                                       tnm-lung-olivier:ScaleneLimphNode ,
+                                                       tnm-lung-olivier:ScaleneLymphNode ,
                                                        tnm-lung-olivier:SubcarinalLymphNode ,
                                                        tnm-lung-olivier:SupraclavicularLymphNode .
 
@@ -634,6 +681,130 @@ tnm-lung-olivier:N0 rdf:type owl:Class ;
                                                              ) ;
                                           rdf:type owl:Class
                                         ] .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#N1
+tnm-lung-olivier:N1 rdf:type owl:Class ;
+                    owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:LungCancer
+                                                               [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty tnm-lung-olivier:hasMetastasis ;
+                                                                                                        owl:someValuesFrom tnm-lung-olivier:HilarLymphNode
+                                                                                                      ]
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty tnm-lung-olivier:hasMetastasis ;
+                                                                                                        owl:someValuesFrom tnm-lung-olivier:IpsilateralMetastasis
+                                                                                                      ]
+                                                                                                    ) ;
+                                                                                 rdf:type owl:Class
+                                                                               ]
+                                                                               [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty tnm-lung-olivier:hasMetastasis ;
+                                                                                                        owl:someValuesFrom tnm-lung-olivier:IpsilateralMetastasis
+                                                                                                      ]
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty tnm-lung-olivier:hasMetastasis ;
+                                                                                                        owl:someValuesFrom tnm-lung-olivier:PeribronchialLymphNode
+                                                                                                      ]
+                                                                                                    ) ;
+                                                                                 rdf:type owl:Class
+                                                                               ]
+                                                                             )
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] ;
+                    rdfs:subClassOf tnm-lung-olivier:LungCancer .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#N2
+tnm-lung-olivier:N2 rdf:type owl:Class ;
+                    owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:LungCancer
+                                                               [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty tnm-lung-olivier:hasMetastasis ;
+                                                                                                        owl:someValuesFrom tnm-lung-olivier:IpsilateralMetastasis
+                                                                                                      ]
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty tnm-lung-olivier:hasMetastasis ;
+                                                                                                        owl:someValuesFrom tnm-lung-olivier:MediastinalLymphNode
+                                                                                                      ]
+                                                                                                    ) ;
+                                                                                 rdf:type owl:Class
+                                                                               ]
+                                                                               [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty tnm-lung-olivier:hasMetastasis ;
+                                                                                                        owl:someValuesFrom tnm-lung-olivier:IpsilateralMetastasis
+                                                                                                      ]
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty tnm-lung-olivier:hasMetastasis ;
+                                                                                                        owl:someValuesFrom tnm-lung-olivier:SubcarinalLymphNode
+                                                                                                      ]
+                                                                                                    ) ;
+                                                                                 rdf:type owl:Class
+                                                                               ]
+                                                                             )
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] ;
+                    rdfs:subClassOf tnm-lung-olivier:LungCancer .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#N3
+tnm-lung-olivier:N3 rdf:type owl:Class ;
+                    owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:LungCancer
+                                                               [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Class ;
+                                                                                                        owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty tnm-lung-olivier:hasMetastasis ;
+                                                                                                                        owl:someValuesFrom tnm-lung-olivier:ContralateralMetastasis
+                                                                                                                      ]
+                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty tnm-lung-olivier:hasMetastasis ;
+                                                                                                                        owl:someValuesFrom tnm-lung-olivier:IpsilateralMetastasis
+                                                                                                                      ]
+                                                                                                                    )
+                                                                                                      ]
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty tnm-lung-olivier:hasMetastasis ;
+                                                                                                        owl:someValuesFrom tnm-lung-olivier:ScaleneLymphNode
+                                                                                                      ]
+                                                                                                    ) ;
+                                                                                 rdf:type owl:Class
+                                                                               ]
+                                                                               [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty tnm-lung-olivier:hasMetastasis ;
+                                                                                                        owl:someValuesFrom tnm-lung-olivier:ContralateralMetastasis
+                                                                                                      ]
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty tnm-lung-olivier:hasMetastasis ;
+                                                                                                        owl:someValuesFrom tnm-lung-olivier:HilarLymphNode
+                                                                                                      ]
+                                                                                                    ) ;
+                                                                                 rdf:type owl:Class
+                                                                               ]
+                                                                               [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty tnm-lung-olivier:hasMetastasis ;
+                                                                                                        owl:someValuesFrom tnm-lung-olivier:ContralateralMetastasis
+                                                                                                      ]
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty tnm-lung-olivier:hasMetastasis ;
+                                                                                                        owl:someValuesFrom tnm-lung-olivier:MediastinalLymphNode
+                                                                                                      ]
+                                                                                                    ) ;
+                                                                                 rdf:type owl:Class
+                                                                               ]
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty tnm-lung-olivier:hasMetastasis ;
+                                                                                 owl:someValuesFrom tnm-lung-olivier:SupraclavicularLymphNode
+                                                                               ]
+                                                                             )
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] ;
+                    rdfs:subClassOf tnm-lung-olivier:LungCancer .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#ParietalPericardium
@@ -832,9 +1003,21 @@ tnm-lung-olivier:Patient9 rdf:type owl:Class ;
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#PeribronchialLymphNode
 tnm-lung-olivier:PeribronchialLymphNode rdf:type owl:Class ;
                                         rdfs:subClassOf tnm-lung-olivier:RegionalLymphNode ;
-                                        owl:disjointWith tnm-lung-olivier:ScaleneLimphNode ,
+                                        owl:disjointWith tnm-lung-olivier:ScaleneLymphNode ,
                                                          tnm-lung-olivier:SubcarinalLymphNode ,
                                                          tnm-lung-olivier:SupraclavicularLymphNode .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#PeribronchialMetastasis
+tnm-lung-olivier:PeribronchialMetastasis rdf:type owl:Class ;
+                                         owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:Metastasis
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty tnm-lung-olivier:hasLocation ;
+                                                                                      owl:someValuesFrom tnm-lung-olivier:PeribronchialLymphNode
+                                                                                    ]
+                                                                                  ) ;
+                                                               rdf:type owl:Class
+                                                             ] .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#PericardialEffusion
@@ -989,8 +1172,8 @@ tnm-lung-olivier:RightMediastinalMetastasis rdf:type owl:Class ;
                                                             ] .
 
 
-###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#ScaleneLimphNode
-tnm-lung-olivier:ScaleneLimphNode rdf:type owl:Class ;
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#ScaleneLymphNode
+tnm-lung-olivier:ScaleneLymphNode rdf:type owl:Class ;
                                   rdfs:subClassOf tnm-lung-olivier:RegionalLymphNode ;
                                   owl:disjointWith tnm-lung-olivier:SubcarinalLymphNode ,
                                                    tnm-lung-olivier:SupraclavicularLymphNode .
