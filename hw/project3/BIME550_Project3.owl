@@ -63,6 +63,10 @@ tnm-lung-olivier:hasSide rdf:type owl:ObjectProperty ;
                          rdfs:range tnm-lung-olivier:Side .
 
 
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#hasSize
+tnm-lung-olivier:hasSize rdf:type owl:ObjectProperty .
+
+
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#isAnatomicalPartOf
 tnm-lung-olivier:isAnatomicalPartOf rdf:type owl:ObjectProperty ,
                                              owl:TransitiveProperty .
@@ -82,6 +86,16 @@ tnm-lung-olivier:isLocatedIn rdf:type owl:ObjectProperty .
 tnm-lung-olivier:isMetastasisOf rdf:type owl:ObjectProperty ,
                                          owl:FunctionalProperty ;
                                 rdfs:range tnm-lung-olivier:PrimaryTumor .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#surroundedBy
+tnm-lung-olivier:surroundedBy rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf owl:topObjectProperty ;
+                              owl:inverseOf tnm-lung-olivier:surrounds .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#surrounds
+tnm-lung-olivier:surrounds rdf:type owl:ObjectProperty .
 
 
 #################################################################
@@ -1223,6 +1237,14 @@ tnm-lung-olivier:SupraclavicularLymphNode rdf:type owl:Class ;
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#T1
 tnm-lung-olivier:T1 rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                          owl:onProperty tnm-lung-olivier:hasSize ;
+                                          owl:someValuesFrom [ rdf:type owl:Class ;
+                                                               owl:unionOf ( tnm-lung-olivier:TumorBetween2cm3cm
+                                                                             tnm-lung-olivier:TumorSmaller2cm
+                                                                           )
+                                                             ]
+                                        ] ;
                     rdfs:subClassOf tnm-lung-olivier:LungCancer .
 
 
