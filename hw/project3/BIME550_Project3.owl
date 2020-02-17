@@ -597,7 +597,7 @@ tnm-lung-olivier:M1a rdf:type owl:Class ;
                                                          ]
                                                        )
                                          ] ;
-                     rdfs:subClassOf tnm-lung-olivier:M1 .
+                     rdfs:subClassOf tnm-lung-olivier:LungCancer .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#M1b
@@ -623,7 +623,7 @@ tnm-lung-olivier:M1b rdf:type owl:Class ;
                                                                                    ]
                                                               ]
                                          ] ;
-                     rdfs:subClassOf tnm-lung-olivier:M1 .
+                     rdfs:subClassOf tnm-lung-olivier:LungCancer .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#MalignantPericardialEffusion
@@ -1238,14 +1238,57 @@ tnm-lung-olivier:SupraclavicularLymphNode rdf:type owl:Class ;
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#T1
 tnm-lung-olivier:T1 rdf:type owl:Class ;
                     owl:equivalentClass [ rdf:type owl:Restriction ;
-                                          owl:onProperty tnm-lung-olivier:hasSize ;
-                                          owl:someValuesFrom [ rdf:type owl:Class ;
-                                                               owl:unionOf ( tnm-lung-olivier:TumorBetween2cm3cm
-                                                                             tnm-lung-olivier:TumorSmaller2cm
-                                                                           )
+                                          owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
+                                          owl:someValuesFrom [ owl:intersectionOf ( [ rdf:type owl:Class ;
+                                                                                      owl:complementOf [ rdf:type owl:Restriction ;
+                                                                                                         owl:onProperty tnm-lung-olivier:hasMetastasis ;
+                                                                                                         owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                                                                              owl:onProperty tnm-lung-olivier:hasLocation ;
+                                                                                                                              owl:allValuesFrom tnm-lung-olivier:Bronchus
+                                                                                                                            ]
+                                                                                                       ]
+                                                                                    ]
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty tnm-lung-olivier:hasSize ;
+                                                                                      owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                           owl:unionOf ( tnm-lung-olivier:TumorBetween2cm3cm
+                                                                                                                         tnm-lung-olivier:TumorSmaller2cm
+                                                                                                                       )
+                                                                                                         ]
+                                                                                    ]
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty tnm-lung-olivier:surroundedBy ;
+                                                                                      owl:someValuesFrom tnm-lung-olivier:Lung
+                                                                                    ]
+                                                                                  ) ;
+                                                               rdf:type owl:Class
                                                              ]
                                         ] ;
                     rdfs:subClassOf tnm-lung-olivier:LungCancer .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#T1a
+tnm-lung-olivier:T1a rdf:type owl:Class ;
+                     owl:equivalentClass [ rdf:type owl:Restriction ;
+                                           owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
+                                           owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                owl:onProperty tnm-lung-olivier:hasSize ;
+                                                                owl:allValuesFrom tnm-lung-olivier:TumorSmaller2cm
+                                                              ]
+                                         ] ;
+                     rdfs:subClassOf tnm-lung-olivier:LungCancer .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#T1b
+tnm-lung-olivier:T1b rdf:type owl:Class ;
+                     owl:equivalentClass [ rdf:type owl:Restriction ;
+                                           owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
+                                           owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                owl:onProperty tnm-lung-olivier:hasSize ;
+                                                                owl:allValuesFrom tnm-lung-olivier:TumorBetween2cm3cm
+                                                              ]
+                                         ] ;
+                     rdfs:subClassOf tnm-lung-olivier:LungCancer .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Trachea
