@@ -689,21 +689,15 @@ tnm-lung-olivier:M1b rdf:type owl:Class ;
                      owl:equivalentClass [ rdf:type owl:Restriction ;
                                            owl:onProperty tnm-lung-olivier:hasMetastasis ;
                                            owl:someValuesFrom [ rdf:type owl:Restriction ;
-                                                                owl:onProperty tnm-lung-olivier:isLocatedIn ;
-                                                                owl:someValuesFrom [ owl:intersectionOf ( [ rdf:type owl:Class ;
-                                                                                                            owl:complementOf tnm-lung-olivier:ChestWall
-                                                                                                          ]
-                                                                                                          [ rdf:type owl:Class ;
-                                                                                                            owl:complementOf tnm-lung-olivier:LobeOfLung
-                                                                                                          ]
-                                                                                                          [ rdf:type owl:Class ;
-                                                                                                            owl:complementOf tnm-lung-olivier:Lung
-                                                                                                          ]
-                                                                                                          [ rdf:type owl:Class ;
-                                                                                                            owl:complementOf tnm-lung-olivier:Trachea
-                                                                                                          ]
-                                                                                                        ) ;
-                                                                                     rdf:type owl:Class
+                                                                owl:onProperty tnm-lung-olivier:hasLocation ;
+                                                                owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                     owl:complementOf [ rdf:type owl:Class ;
+                                                                                                        owl:unionOf ( tnm-lung-olivier:ChestWall
+                                                                                                                      tnm-lung-olivier:LobeOfLung
+                                                                                                                      tnm-lung-olivier:Lung
+                                                                                                                      tnm-lung-olivier:Trachea
+                                                                                                                    )
+                                                                                                      ]
                                                                                    ]
                                                               ]
                                          ] ;
@@ -1357,11 +1351,7 @@ tnm-lung-olivier:Side rdf:type owl:Class ;
 tnm-lung-olivier:Stage1A rdf:type owl:Class ;
                          owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:M0
                                                                     tnm-lung-olivier:N0
-                                                                    [ rdf:type owl:Class ;
-                                                                      owl:unionOf ( tnm-lung-olivier:T1a
-                                                                                    tnm-lung-olivier:T1b
-                                                                                  )
-                                                                    ]
+                                                                    tnm-lung-olivier:T1
                                                                   ) ;
                                                rdf:type owl:Class
                                              ] ;
