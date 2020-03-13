@@ -87,14 +87,14 @@ mechanical_ventilation(p5).
 
 % Sepic shock
 
-% Open Skin Lesions
-open_skin_lesions(p1).
-open_skin_lesions(p8).
+% Open Skin Lesion
+open_skin_lesion(p1).
+open_skin_lesion(p8).
 
 % Past MRSA Infections
-past_mrsa(p3).
-past_mrsa(p5).
-past_mrsa(p7).
+prev_mrsa(p3).
+prev_mrsa(p5).
+prev_mrsa(p7).
 
 % Vancomycin
 tx_vancomycin(p2).
@@ -143,3 +143,65 @@ age_less_2(Person) :-
     Age < 2.
 
 female(Person) :- not(male(Person)).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Predictions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+get_score(X, S, P) :-
+    ( call(P, X) -> S = 1; S = 0 ).
+
+predict_mrsa(X, S, Threshold) :-
+    predict_mrsa_score(X, L),
+    sum_list(L, T),
+    write('Prediction score is ' + T),
+    ( T > Threshold -> S = true; S = false ).
+
+predict_mrsa_score(X, S) :-
+    get_score(X, S1, male),
+    get_score(X, S2, prev_hosp),
+    get_score(X, S3, prev_surg),
+    get_score(X, S4, prev_mrsa),
+    get_score(X, S5, catheter),
+    get_score(X, S6, freq_antibiotics),
+    get_score(X, S7, chronic_skin_disorder),
+    %%get_score(X, S8, ischemic_heart_disease),
+    %%get_score(X, S9, cancer),
+    get_score(X, S10, chronic_renal_disease),
+    get_score(X, S11, open_skin_lesion),
+    S = [ S1, S2, S3, S4, S5, S6, S7, S10, S11 ].
+
+
+predict_hosp_or_comm_aqcuired_score(X, HAP, CAP) :-
+
+    % Community-acquired
+    get_score(X, CA1, age_greater_or_equal_75),
+    get_score(X, CA2, male),
+    get_score(X, CA3, athlete),
+    % get_score(X, CA4, iv_drug_user),
+    get_score(X, CA5, prev_mrsa),
+    get_score(X, CA6, chronic_skin_disorder),
+
+    % Hospital-acquired
+    get_score(X, HA1, male),
+    get_score(X, HA2, prev_hosp),
+    get_score(X, HA3, prev_mrsa),
+    get_score(X, HA4, catheter),
+    get_score(X, HA5, freq_antibiotics),
+    get_score(X, HA6, chronic_skin_disorder),
+    % get_score(X, HA7, ischemic_heart_disease),
+    % get_score(X, HA8, cancer),
+    get_score(X, HA9, chronic_renal_disease),
+    get_score(X, HA10, open_skin_lesion),
+
+    % Compare
+    CAL = [ CA1, CA2, CA3, CA5, CA6 ],
+    HAL = [ HA1, HA2, HA3, HA4, HA5, HA6, HA9 , HA10 ],
+    sum_list(CAL, CAS),
+    sum_list(HAL, HAS),
+    length(CAL, CALEN),
+    length(HAL, HALEN),
+    CA is (float(CAS / CALEN)),
+    HA is (float(HAS / HALEN)),
+    write('Community-Acquired prediction is ' + CA + '\n'),
+    write('Hospital-Acquired prediction is ' + HA),
+    ( CA >= HA -> CAP = true, HAP = false; CAP = false, HAP = true ).
