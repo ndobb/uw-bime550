@@ -182,6 +182,20 @@ pregnant(dummyp1).
 % Systemic Illness
 systemic_illness(dummyp1).
 
+% Cellulitis
+cellulitis(p1).
+cellulitis(p3).
+extensive_cellulitis(dummyp1).
+
+% Other skin disorders
+infected_scratch(dummyp1).
+insect_bite(dummyp1).
+boils(dummyp1).
+small_abscess(dummyp1).
+moderate_abscess(dummyp1).
+large_abscess(dummyp1).
+multiple_abscess(dummyp1).
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Rules
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -209,7 +223,7 @@ age_less_2(Person) :-
 get_score(X, S, P) :-
     ( call(P, X) -> S = 1; S = 0 ).
 
-predict_mrsa(X, S, Threshold) :-
+predict_mrsa(X, V) :-
     get_score(X, S1, male),
     get_score(X, S2, prev_hosp),
     get_score(X, S3, prev_surg),
@@ -217,22 +231,25 @@ predict_mrsa(X, S, Threshold) :-
     get_score(X, S5, catheter),
     get_score(X, S6, freq_antibiotics),
     get_score(X, S7, chronic_skin_disorder),
-    %%get_score(X, S8, ischemic_heart_disease),
-    %%get_score(X, S9, cancer),
+    get_score(X, S8, ischemic_heart_disease),
+    get_score(X, S9, cancer),
     get_score(X, S10, chronic_renal_disease_or_impair),
     get_score(X, S11, open_skin_lesion),
-    S = [ S1, S2, S3, S4, S5, S6, S7, S10, S11 ],
-    sum_list(S, T),
-    write('MRSA prediction score is ' + T),
-    ( T > Threshold -> S = true; S = false ).
+    S = [ S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11 ],
+    sum_list(S, V).
+    % write('MRSA prediction score is ' + V).
 
-predict_hosp_or_comm_acquired_score(X, HAP, CAP) :-
+likely_mrsa(X) :-
+    predict_mrsa(X, S),
+    S > 3.
+
+predict_hosp_or_comm_acquired_score(X, HA, CA) :-
 
     % Community-acquired
     get_score(X, CA1, age_greater_or_equal_75),
     get_score(X, CA2, male),
     get_score(X, CA3, athlete),
-    % get_score(X, CA4, iv_drug_user),
+    get_score(X, CA4, iv_drug_user),
     get_score(X, CA5, prev_mrsa),
     get_score(X, CA6, chronic_skin_disorder),
 
@@ -243,28 +260,43 @@ predict_hosp_or_comm_acquired_score(X, HAP, CAP) :-
     get_score(X, HA4, catheter),
     get_score(X, HA5, freq_antibiotics),
     get_score(X, HA6, chronic_skin_disorder),
-    % get_score(X, HA7, ischemic_heart_disease),
-    % get_score(X, HA8, cancer),
+    get_score(X, HA7, ischemic_heart_disease),
+    get_score(X, HA8, cancer),
     get_score(X, HA9, chronic_renal_disease_or_impair),
     get_score(X, HA10, open_skin_lesion),
 
     % Compare
-    CAL = [ CA1, CA2, CA3, CA5, CA6 ],
-    HAL = [ HA1, HA2, HA3, HA4, HA5, HA6, HA9 , HA10 ],
+    CAL = [ CA1, CA2, CA3, CA4, CA5, CA6 ],
+    HAL = [ HA1, HA2, HA3, HA4, HA5, HA6, HA7, HA8, HA9, HA10 ],
     sum_list(CAL, CAS),
     sum_list(HAL, HAS),
     length(CAL, CALEN),
     length(HAL, HALEN),
     CA is (float(CAS / CALEN)),
-    HA is (float(HAS / HALEN)),
-    write('Community-Acquired prediction is ' + CA + '\n'),
-    write('Hospital-Acquired prediction is ' + HA),
-    ( CA >= HA -> CAP = true, HAP = false; CAP = false, HAP = true ).
+    HA is (float(HAS / HALEN)).
+    % write('Community-Acquired prediction is ' + CA + '\n'),
+    % write('Hospital-Acquired prediction is ' + HA).
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Predict whether Hospital or Community-acquired
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+likely_hospital_acquired(X) :-
+    patient(X),
+    predict_hosp_or_comm_acquired_score(X, HA, CA),
+    HA > CA.
+
+likely_community_acquired(X) :-
+    patient(X),
+    predict_hosp_or_comm_acquired_score(X, HA, CA),
+    CA >= HA.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Suggest Treatments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 suggest_tx_daptomycin(X) :-
     (
-        sepsis(X);
-        chronic_renal_disease_or_impair(X);
+        sepsis(X) ;
+        chronic_renal_disease_or_impair(X) ;
         cancer(X)
     ),
     age(X, Age),
@@ -280,7 +312,57 @@ suggest_tx_linezolid(X) :-
 
 suggest_tx_vancomycin(X) :-
     patient(X),
-    findall(D, suggest_tx_daptomycin(D), DL),
-    findall(L, suggest_tx_linezolid(L), LL),
-    not_member(X, DL),
-    not_member(X, LL).
+    (
+        findall(D, suggest_tx_daptomycin(D), DL),
+        findall(L, suggest_tx_linezolid(L), LL),
+        not_member(X, DL),
+        not_member(X, LL) ;
+        ca_mrsa_ssti_severe(X)
+    ).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Predict SSTI classifications
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ca_mrsa_ssti_mild(X) :-
+    likely_community_acquired(X),
+    (
+        infected_scratch(X) ;
+        insect_bite(X) ;
+        boils(X) ;
+        small_abscess(X)
+    ),
+    findall(S, systemic_illness(S), SL),
+    not_member(X, SL).
+
+ca_mrsa_ssti_moderate(X) :-
+    likely_community_acquired(X),
+    (
+        cellulitis(X) ;
+        moderate_abscess(X)
+    ),
+    findall(S, systemic_illness(S), SL),
+    not_member(X, SL).
+
+ca_mrsa_ssti_severe(X) :-
+    likely_community_acquired(X),
+    (
+        extensive_cellulitis(X) ;
+        large_abscess(X) ;
+        multiple_abscess(X) ;
+        systemic_illness(X)
+    ).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Suggest infection management
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+suggest_topical_antiseptic_or_antibacterial(X) :-
+    ca_mrsa_ssti_mild(X),
+    age(X, Age),
+    Age == 0.
+
+suggest_cover_lesions(X) :-
+    ca_mrsa_ssti_mild(X),
+    open_skin_lesion(X).
+
+suggest_clindamycin_and_drain_abscess(X) :-
+    ca_mrsa_ssti_moderate(X).
